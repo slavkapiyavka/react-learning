@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hero-card {
+  margin: 8px;
+  border-radius: 2px;
+  padding: 10px 14px;
+  outline: 1px solid red;
+}
+
+.active {
+  color: green;
+}
+
+.non-active {
+  color: lightgrey;
+}
