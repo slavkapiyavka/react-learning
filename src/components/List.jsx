@@ -29,6 +29,24 @@ export default function List ({ listTitle }) {
         Что означает синтаксис в коде ниже?
         <code><pre>{ codeString }</pre></code>
       </li>
+      <li>
+        <code>
+          <pre>
+          {`const [count, setCount] = useState(0);
+const increment = () => {
+  setCount(count + 1);
+};`}
+          </pre>
+        </code>
+
+        Каким образом обновляется count, если в setCount мы передаём результат сложения?
+        Будет ли какая-то разница, или сайдэффект, если использовать одну из следующих записей: setCount(++count) / setCount(count + 1)
+      </li>
+      <li>
+        <p>не очень понятен пункт про изменяемость state и props.</p>
+        <p>в главе State написано: <blockquote>Простыми словами, это то, что ИЗМЕНЯЕТСЯ в компоненте, нежели props-ы которые неизменны.</blockquote></p>
+        <p>Там же далее написано: <blockquote>State можно передавать в дочерние компоненты при помощи props.</blockquote></p>
+      </li>
     </ol>
   )
 }
