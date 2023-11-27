@@ -6,6 +6,7 @@ import List from './components/List';
 import Counter from './components/Counter';
 import Span from './components/props-chapter/Span';
 import Hero from './components/props-chapter/Hero';
+import Card from './components/state-chapter/Card';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
@@ -35,5 +36,6 @@ root.render(
     <Span year={DATE_EXAMPLE}/>
     <Hero {...superHero}/>
     <Counter />
+    <Card />
   </React.StrictMode>
 );
