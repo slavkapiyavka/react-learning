@@ -7,11 +7,13 @@ import Counter from './components/Counter';
 import Span from './components/props-chapter/Span';
 import Hero from './components/props-chapter/Hero';
 import Card from './components/state-chapter/Card';
+import Hint from './components/state-chapter/Hint';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
 const DATE_EXAMPLE = new Date().getFullYear();
 const INITIAL_VALUE = 42;
+const HINT_TEXT = 'этот текст можно скрыть';
 const superHero = {
   age: 30,
   name: "Flying knight",
@@ -37,5 +39,6 @@ root.render(
     <Hero {...superHero}/>
     <Counter />
     <Card />
+    <Hint text={HINT_TEXT}/>
   </React.StrictMode>
 );
