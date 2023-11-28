@@ -8,6 +8,7 @@ import Span from './components/props-chapter/Span';
 import Hero from './components/props-chapter/Hero';
 import Card from './components/state-chapter/Card';
 import Hint from './components/state-chapter/Hint';
+import PerfectInput from './components/state-chapter/PerfectInput';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
@@ -40,5 +41,6 @@ root.render(
     <Counter />
     <Card />
     <Hint text={HINT_TEXT}/>
+    <PerfectInput/>
   </React.StrictMode>
 );
