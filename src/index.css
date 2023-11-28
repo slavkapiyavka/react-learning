@@ -21,6 +21,7 @@ blockquote {
   border-radius: 2px;
 }
 
+/* hero card */
 .hero-card {
   margin: 8px;
   border-radius: 2px;
@@ -34,4 +35,18 @@ blockquote {
 
 .non-active {
   color: lightgrey;
+}
+
+/* simple card */
+.card {
+  margin: 8px 12px;
+  padding: 4px 6px;
+  width: fit-content;
+  border-radius: 2px;
+  background-color: aliceblue;
+  outline: 1px solid lightblue;
+}
+
+.card:empty {
+  display: none;
 }
