@@ -9,6 +9,7 @@ import Hero from './components/props-chapter/Hero';
 import Card from './components/state-chapter/Card';
 import Hint from './components/state-chapter/Hint';
 import PerfectInput from './components/state-chapter/PerfectInput';
+import ColorButton from './components/state-chapter/ColorButton';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
@@ -42,5 +43,6 @@ root.render(
     <Card />
     <Hint text={HINT_TEXT}/>
     <PerfectInput/>
+    <ColorButton />
   </React.StrictMode>
 );
