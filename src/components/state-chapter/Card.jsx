@@ -1,8 +1,11 @@
 import React from 'react';
+import EndlessLikes from './EndlessLikes';
 
 const Card = () => {
+
   return (
-    <div>
+    <div className='card'>
+      <EndlessLikes/>
     </div>
   );
 }
