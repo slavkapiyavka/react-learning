@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import getRandomInteger from '../../utils/functions';
 import ChildComponent from './ChildComponent';
+import SiblingComponent from './SiblingComponent';
 
 const ParentComponent = () => {
   const [counter, setCounter] = useState(0);
@@ -28,6 +29,7 @@ const ParentComponent = () => {
       </aside>
       <hr />
       <ChildComponent count={counter}/>
+      <SiblingComponent />
     </>
   );
 }
