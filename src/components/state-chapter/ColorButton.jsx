@@ -5,7 +5,7 @@ const ColorButton = () => {
   const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`;
   const textStyle = {
     color,
-    'font-size': '24px',
+    fontSize: '24px',
   }
   const onButtonClick = () => setColor(getRandomColor())
 
