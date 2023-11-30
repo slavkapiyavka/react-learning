@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Hint = ({ text }) => {
   const [visibility, setVisibility] = useState(true);
-  const onButtonClick = () => setVisibility(!visibility);
+  const onButtonClick = () => setVisibility((actual) => !actual);
   const textStyle = {
     position: 'fixed',
     inset: 0,

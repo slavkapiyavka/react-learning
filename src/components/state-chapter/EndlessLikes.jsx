@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const EndlessLikes = () => {
   const [likesCount, setLike] = useState(0);
-  const onButtonClick = () => setLike(likesCount + 1);
+  const onButtonClick = () => setLike((actual) => actual + 1);
 
   return (
     <>
