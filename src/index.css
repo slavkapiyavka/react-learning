@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+blockquote {
+  margin: 8px 12px;
+  padding: 4px 6px;
+  width: fit-content;
+  background-color: lightyellow;
+  outline: 1px solid yellow;
+  border-radius: 2px;
+}
+
+/* hero card */
 .hero-card {
   margin: 8px;
   border-radius: 2px;
@@ -25,4 +35,18 @@ code {
 
 .non-active {
   color: lightgrey;
+}
+
+/* simple card */
+.card {
+  margin: 8px 12px;
+  padding: 4px 6px;
+  width: fit-content;
+  border-radius: 2px;
+  background-color: aliceblue;
+  outline: 1px solid lightblue;
+}
+
+.card:empty {
+  display: none;
 }
