@@ -10,7 +10,6 @@ const ParentComponent = () => {
   const resetCounter = () => setCounter(0);
   const getRandomNumber = () => setCounter(getRandomInteger()); // что происходит, если передавать функцию, а не результат вызова?
   const decrementCounter = () => setCounter((actual) => counter <= 0 ? 0 : actual - 1);
-  };
 
   return (
     <>
