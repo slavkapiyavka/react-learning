@@ -1,9 +1,9 @@
-export default function List ({ listTitle }) {
+export default function List({ listTitle }) {
   const codeString = "{isPlayerA && <Counter person=\"Taylor\" />}";
 
   return (
     <ol>
-      { listTitle }
+      {listTitle}
       <li>
         почему cra? в <a href="https://legacy.reactjs.org/docs/create-a-new-react-app.html">документации</a> react cra отмечен как legacy и предлагает перейти на <a href="https://react.dev/">новый сайт</a> и установить <a href='https://react.dev/learn/start-a-new-react-project'>фреймворк</a> на выбор
       </li>
@@ -27,12 +27,12 @@ export default function List ({ listTitle }) {
       </li>
       <li>
         Что означает синтаксис в коде ниже?
-        <code><pre>{ codeString }</pre></code>
+        <code><pre>{codeString}</pre></code>
       </li>
       <li>
         <code>
           <pre>
-          {`const [count, setCount] = useState(0);
+            {`const [count, setCount] = useState(0);
 const increment = () => {
   setCount(count + 1);
 };`}
@@ -44,8 +44,10 @@ const increment = () => {
       </li>
       <li>
         <p>не очень понятен пункт про изменяемость state и props.</p>
-        <p>в главе State написано: <blockquote>Простыми словами, это то, что ИЗМЕНЯЕТСЯ в компоненте, нежели props-ы которые неизменны.</blockquote></p>
-        <p>Там же далее написано: <blockquote>State можно передавать в дочерние компоненты при помощи props.</blockquote></p>
+        <p>в главе State написано:</p>
+        <blockquote>Простыми словами, это то, что ИЗМЕНЯЕТСЯ в компоненте, нежели props-ы которые неизменны.</blockquote>
+        <p>Там же далее написано:</p>
+        <blockquote>State можно передавать в дочерние компоненты при помощи props.</blockquote>
       </li>
     </ol>
   )
