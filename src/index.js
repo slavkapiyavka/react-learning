@@ -32,19 +32,21 @@ const superHero = {
   allies: ["Spider Man", "Iron Man", "Captain America"]
 };
 
+const showComponents = false;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header pageTitle={MAIN_PAGE_TITLE}/>
-    <List listTitle={QUESTIONS_LIST_TITLE} />
-    <Counter value={INITIAL_VALUE}/>
-    <Span year={DATE_EXAMPLE}/>
-    <Hero {...superHero}/>
-    <Counter />
-    <Card />
-    <Hint text={HINT_TEXT}/>
-    <PerfectInput/>
-    <ColorButton />
-    <ParentComponent />
+    {showComponents && <Header pageTitle={MAIN_PAGE_TITLE}/>}
+    {showComponents && <List listTitle={QUESTIONS_LIST_TITLE} />}
+    {showComponents && <Counter value={INITIAL_VALUE}/>}
+    {showComponents && <Span year={DATE_EXAMPLE}/>}
+    {showComponents && <Hero {...superHero}/>}
+    {showComponents && <Counter />}
+    {showComponents && <Card />}
+    {showComponents && <Hint text={HINT_TEXT}/>}
+    {showComponents && <PerfectInput/>}
+    {showComponents && <ColorButton />}
+    {showComponents && <ParentComponent />}
   </React.StrictMode>
 );
