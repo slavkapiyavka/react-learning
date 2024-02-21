@@ -14,18 +14,18 @@ class LifeCycleClassComponent extends Component {
 
   componentDidMount() {
     axios.get(fetchURL)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.error('GET DATA ERROR: ', error.message))
+      .then((response) => console.log('CC: get data', response.data))
+      .catch((error) => console.error('CC: get data error: ', error.message))
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('prevProps: ', prevProps)
-    console.log('prevState: ', prevState)
-    console.log('current count value: ', this.state.count)
+    console.log('CC: prevProps: ', prevProps)
+    console.log('CC: prevState: ', prevState)
+    console.log('CC: current count value: ', this.state.count)
   }
 
   componentWillUnmount() {
-    console.log('component will be destroy')
+    console.log('CC: component will be destroy')
   }
 
   shouldComponentUpdate() {
