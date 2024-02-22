@@ -28,8 +28,8 @@ class LifeCycleClassComponent extends Component {
     console.log('CC: component will be destroy')
   }
 
-  shouldComponentUpdate() {
-    return this.state.count % 2 !== 0
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.count % 2 === 0
   }
 
   buttonClickHandle = () => {
