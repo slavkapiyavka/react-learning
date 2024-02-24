@@ -9,7 +9,6 @@ class LifeCycleClassComponent extends Component {
     this.state = {
       count: 0
     }
-    this.buttonClickHandle = this.buttonClickHandle.bind(this)
   }
 
   componentDidMount() {
