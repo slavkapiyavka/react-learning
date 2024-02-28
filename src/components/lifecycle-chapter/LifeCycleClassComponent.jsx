@@ -41,8 +41,7 @@ class LifeCycleClassComponent extends Component {
   }
 
   buttonClickHandle = () => {
-    this.setState((prevState) => ({ count: prevState.count + 1 }))
-    this.fetchData()
+    this.setState((prevState) => ({ count: prevState.count + 1 }), this.fetchData())
   }
 
   render() {
