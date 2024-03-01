@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import CountComponent from './CountComponent';
 
 const fetchURL = 'https://jsonplaceholder.typicode.com/todos'
 
@@ -42,7 +43,9 @@ const LifeCycleFunctionComponent = () => {
       <p>function component example</p>
       <p>{count}</p>
       <button onClick={buttonClickHandle}>increment counter</button>
-
+      <hr />
+      <CountComponent count={count} />
+      <hr />
       <p>todo id: {data.id}</p>
       <p>todo title: {data.title}</p>
     </div>
