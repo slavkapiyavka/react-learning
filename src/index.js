@@ -11,6 +11,8 @@ import Hint from './components/state-chapter/Hint';
 import PerfectInput from './components/state-chapter/PerfectInput';
 import ColorButton from './components/state-chapter/ColorButton';
 import ParentComponent from './components/state-chapter/ParentComponent';
+import LifeCycleClassComponent from './components/lifecycle-chapter/LifeCycleClassComponent';
+import LifeCycleFunctionComponent from './components/lifecycle-chapter/LifeCycleFunctionComponent';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
@@ -26,7 +28,7 @@ const superHero = {
     speed: 80,
     intelligence: 90
   },
-  fightCrime: function(name) {
+  fightCrime: function (name) {
     return `${name} fight crime!`;
   },
   allies: ["Spider Man", "Iron Man", "Captain America"]
@@ -37,16 +39,18 @@ const showComponents = false;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {showComponents && <Header pageTitle={MAIN_PAGE_TITLE}/>}
+    {showComponents && <Header pageTitle={MAIN_PAGE_TITLE} />}
     {showComponents && <List listTitle={QUESTIONS_LIST_TITLE} />}
-    {showComponents && <Counter value={INITIAL_VALUE}/>}
-    {showComponents && <Span year={DATE_EXAMPLE}/>}
-    {showComponents && <Hero {...superHero}/>}
+    {showComponents && <Counter value={INITIAL_VALUE} />}
+    {showComponents && <Span year={DATE_EXAMPLE} />}
+    {showComponents && <Hero {...superHero} />}
     {showComponents && <Counter />}
     {showComponents && <Card />}
-    {showComponents && <Hint text={HINT_TEXT}/>}
-    {showComponents && <PerfectInput/>}
+    {showComponents && <Hint text={HINT_TEXT} />}
+    {showComponents && <PerfectInput />}
     {showComponents && <ColorButton />}
     {showComponents && <ParentComponent />}
+    <LifeCycleClassComponent />
+    <LifeCycleFunctionComponent />
   </React.StrictMode>
 );
