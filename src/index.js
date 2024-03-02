@@ -13,6 +13,7 @@ import ColorButton from './components/state-chapter/ColorButton';
 import ParentComponent from './components/state-chapter/ParentComponent';
 import LifeCycleClassComponent from './components/lifecycle-chapter/LifeCycleClassComponent';
 import LifeCycleFunctionComponent from './components/lifecycle-chapter/LifeCycleFunctionComponent';
+import ListComponent from './components/list/ListComponent';
 
 const MAIN_PAGE_TITLE = 'WELCOME';
 const QUESTIONS_LIST_TITLE = 'Questions';
@@ -50,7 +51,8 @@ root.render(
     {showComponents && <PerfectInput />}
     {showComponents && <ColorButton />}
     {showComponents && <ParentComponent />}
-    <LifeCycleClassComponent />
-    <LifeCycleFunctionComponent />
+    {showComponents && <LifeCycleClassComponent />}
+    {showComponents && <LifeCycleFunctionComponent />}
+    <ListComponent />
   </React.StrictMode>
 );
