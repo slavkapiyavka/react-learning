@@ -12,10 +12,11 @@ const ListComponent = ({ data }) => {
 
   const superHeroesList = list.map((element, index) => {
     return (
-      <li key={index}>
-        <p>id: {index}</p>
-        <p>name: {element}</p>
+      <li key={index} className='list-element'>
+        <p className='list-element__id'>id: {index}</p>
+        <p className='list-element__name'>name: {element}</p>
         <button
+          className='list-element__button'
           type="button"
           onClick={() => handleButtonClick(index)}
         >
@@ -30,7 +31,7 @@ const ListComponent = ({ data }) => {
   }, [data])
 
   return (
-    <ul>
+    <ul className='list'>
       {superHeroesList}
     </ul>
   );

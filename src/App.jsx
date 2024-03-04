@@ -27,8 +27,8 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      <div>
+    <main className='main'>
+      <div className='add-hero-controls'>
         <button
           type="button"
           onClick={handleFocus}
@@ -45,7 +45,7 @@ const App = () => {
       </div>
 
       <ListComponent data={heroes} />
-    </>
+    </main>
   );
 }
 
