@@ -50,3 +50,54 @@ blockquote {
 .card:empty {
   display: none;
 }
+
+.main {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: min-content;
+}
+.add-hero-controls {
+  display: grid;
+  align-items: center;
+  gap: 8px;
+  margin: 12px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: max-content;
+  gap: 12px;
+  padding: 0;
+  margin: 12px;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.list-element {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-areas: 'id button' 'name name';
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  padding: 8px;
+  outline: 1px solid gainsboro;
+  border-radius: 4px;
+}
+
+.list-element__id {
+  grid-area: id;
+}
+
+.list-element__name {
+  grid-area: name;
+}
+
+.list-element__button {
+  grid-area: button;
+}
