@@ -8,6 +8,13 @@
   color-scheme: dark;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fafafa;
+    color-scheme: light;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #2b3e51;
