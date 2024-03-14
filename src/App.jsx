@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ListComponent from './components/list/ListComponent';
+import ThemeToggleComponent from './components/ThemeToggleComponent';
 
 const App = () => {
   const [heroes, setHeroes] = useState([
@@ -27,25 +28,29 @@ const App = () => {
   }, [])
 
   return (
-    <main className='main'>
-      <div className='add-hero-controls'>
-        <button
-          type="button"
-          onClick={handleFocus}
-        >
-          set focus
-        </button>
-        <input
-          type="text"
-          ref={inputRef}
-          onChange={handleInputChange}
-          onKeyUp={handleInputKeyUp}
-          value={inputValue}
-        />
-      </div>
+    <>
+      <ThemeToggleComponent />
 
-      <ListComponent data={heroes} />
-    </main>
+      <main className='main'>
+        <div className='add-hero-controls'>
+          <button
+            type="button"
+            onClick={handleFocus}
+          >
+            set focus
+          </button>
+          <input
+            type="text"
+            ref={inputRef}
+            onChange={handleInputChange}
+            onKeyUp={handleInputKeyUp}
+            value={inputValue}
+          />
+        </div>
+
+        <ListComponent data={heroes} />
+      </main>
+    </>
   );
 }
 
