@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ListComponent from './components/list/ListComponent';
 import ThemeToggleComponent from './components/ThemeToggleComponent';
+import ThemeContext from './contexts/ThemeContext';
+import { themes } from './shared/constants';
 
 const App = () => {
+  const [theme, setTheme] = useState(themes.auto)
   const [heroes, setHeroes] = useState([
     "Spider Man",
     "Iron Man",
@@ -27,8 +30,31 @@ const App = () => {
     handleFocus()
   }, [])
 
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem('theme-mode')
+
+    if (savedTheme) {
+      setTheme(savedTheme)
+
+      return
+    }
+
+    const preferredColorSchemeLight = window.matchMedia('(prefers-color-scheme: light)').matches
+    const preferredColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    if (preferredColorSchemeLight) {
+      setTheme(themes.light)
+
+      return
+    } else if (preferredColorSchemeDark) {
+      setTheme(themes.dark)
+
+      return
+    }
+  }, [])
+
   return (
-    <>
+    <ThemeContext.Provider value={[theme, setTheme]}>
       <ThemeToggleComponent />
 
       <main className='main'>
@@ -50,7 +76,7 @@ const App = () => {
 
         <ListComponent data={heroes} />
       </main>
-    </>
+    </ThemeContext.Provider>
   );
 }
 

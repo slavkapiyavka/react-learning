@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import './styles.css';
-import { themes } from './../../shared/constants'
+import { themes } from '../../shared/constants';
+import ThemeContext from '../../contexts/ThemeContext';
 
 const ThemeToggleComponent = () => {
-  const [theme, setTheme] = useState(themes.auto)
+  const [theme, setTheme] = useContext(ThemeContext)
 
   const onThemeToggleClick = (theme) => {
     setTheme(theme)
@@ -11,30 +12,11 @@ const ThemeToggleComponent = () => {
     document.documentElement.dataset.theme = theme
   }
 
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem('theme-mode')
-
-    if (savedTheme) {
-      setTheme(savedTheme)
-
-      return
-    }
-
-    const preferredColorSchemeLight = window.matchMedia('(prefers-color-scheme: light)').matches
-    const preferredColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-    if (preferredColorSchemeLight) {
-      setTheme(themes.light)
-      // document.documentElement.dataset.theme = themes.light
-
-      return
-    } else if (preferredColorSchemeDark) {
-      setTheme(themes.dark)
-      // document.documentElement.dataset.theme = themes.dark
-
-      return
-    }
-  }, [])
+  const onResetThemeClick = () => {
+    setTheme('')
+    window.localStorage.removeItem('theme-mode')
+    document.documentElement.removeAttribute('data-theme')
+  }
 
   return (
     <div className="toggle-wrapper">
@@ -42,7 +24,10 @@ const ThemeToggleComponent = () => {
         <p>current theme mode is "{theme}"</p>
       </div>
       <div>
-        <p>change theme mode</p>
+        <div>
+          <span>change theme mode or </span>
+          <button onClick={onResetThemeClick}>reset theme</button>
+        </div>
 
         {Object.values(themes).map((theme) => (
           <button
