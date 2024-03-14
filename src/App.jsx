@@ -35,6 +35,7 @@ const App = () => {
 
     if (savedTheme) {
       setTheme(savedTheme)
+      document.documentElement.dataset.theme = savedTheme
 
       return
     }
@@ -44,10 +45,12 @@ const App = () => {
 
     if (preferredColorSchemeLight) {
       setTheme(themes.light)
+      document.documentElement.dataset.theme = themes.light
 
       return
     } else if (preferredColorSchemeDark) {
       setTheme(themes.dark)
+      document.documentElement.dataset.theme = themes.dark
 
       return
     }

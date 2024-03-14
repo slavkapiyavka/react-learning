@@ -13,7 +13,7 @@ const ThemeToggleComponent = () => {
   }
 
   const onResetThemeClick = () => {
-    setTheme('')
+    setTheme(themes.auto)
     window.localStorage.removeItem('theme-mode')
     document.documentElement.removeAttribute('data-theme')
   }
